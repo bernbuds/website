@@ -1,6 +1,8 @@
 BernBuds
 ========
 
+Code is GPL v3
+
 What Needs To Be Done
 ---------------------
 
