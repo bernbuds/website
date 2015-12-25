@@ -27,6 +27,7 @@ class VerifyABudController extends APIController
 		}
 
 		$bud->save();
+		$this->api_success();
 	}
 }
 

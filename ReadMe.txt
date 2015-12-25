@@ -57,7 +57,8 @@ iOS
 4. Marketing
 ------------------
 Contact Campaign Manager
-Other Ideas?
+Ad Buys 
+	- on /r/sandersforpresident
 
 5. Zip Code Mapping
 ---------------------

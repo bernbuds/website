@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>BernBuds - Vote the Bern with a Buddy</title>
+	<title>BernBuds - Vote the Bern with a Bud</title>
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />  
 	<meta name="description" content="Be a buddy to bernie and vote with a Bud. Feel the Bern!" />
@@ -162,14 +162,16 @@
 									</span>
 								</div>
 
-								<form id="verify-form" name="verify" method="post" novalidate="novalidate" action="app/controllers/BecomeABudController.php?action=verifyContact">
+								<form id="verify-form" name="verify" method="post" novalidate="novalidate" action="app/controllers/VerifyABudController.php?action=verifyContact">
 
 									<div class="form-row">	 
-										<input type="text" name="verify_email" id="verify_email" size="30" value="" required="" class="text login_input"  placeholder="Email Verification Code"> <a class="resend-link" href="#resend-email">Resend Email Verification</a>
+										<input type="text" name="verify_email" id="verify_email" size="30" value="" required="" class="text login_input"  placeholder="Email Verification Code"> 
+										<!-- <a class="resend-link" href="#resend-email">Resend Email Verification</a> -->
 									</div>
 
 									<div class="form-row">	 
-										<input type="text" name="verify_phone" id="verify_phone" size="30" value="" required="" class="text login_input"  placeholder="Phone Verification Code"> <a class="resend-link" href="#resend-phone">Resend Phone Verification</a>
+										<input type="text" name="verify_phone" id="verify_phone" size="30" value="" required="" class="text login_input"  placeholder="Phone Verification Code"> 
+										<!-- <a class="resend-link" href="#resend-phone">Resend Phone Verification</a> -->
 									</div>
 
 									<div id="btns" class="form-row">	
@@ -183,6 +185,37 @@
 							</div> 
 						
 						</div>
+
+						<div id="thankyou-box">
+						
+							<div class="top">
+							
+								<h2><span class="glyph-item  icon-pencil" aria-hidden="true"></span> Thank you</h2>
+								<p>You've joined BernBuds. We'll be in touch.</p>
+								
+							</div>
+						
+							<div class="bottom"> 
+
+								<div id="response">
+									<span class="green textcenter">
+										<p></p>
+									</span>
+								</div>
+
+								<div id="error">
+									<span>
+										<p>Something went wrong. Please refresh and try again.</p>
+									</span>
+								</div>
+
+								<h2>Contribute</h2>
+								<p>The wheels of the machine must be thorougly oiled with money. <a target="_blank" href="https://secure.actblue.com/contribute/page/lets-go-bernie?refcode=bernbuds.net">Contribute to Bernie's campaign here.</a></p>
+
+							</div> 
+						
+						</div>
+
 					</div>
 
 					
@@ -212,8 +245,8 @@
 <div id="footer">
 
 	<p> 
-		<a href="#"><span class="glyph-item mega icon-social-twitter" aria-hidden="true"></span></a>
-		<a href="#"><span class="glyph-item mega icon-social-facebook" aria-hidden="true"></span></a>
+		<a href="https://twitter.com/intent/tweet?url=https://bernbuds.net&text=Voting+Bernie?+Offer+a+ride+to+others+on+voting+day!"><span class="glyph-item mega icon-social-twitter" aria-hidden="true"></span></a>
+		<a target="_blank" href="https://www.facebook.com/dialog/share?app_id=145634995501895&amp;display=popup&href=https%3A%2F%2Fbernbuds.net%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer"><span class="glyph-item mega icon-social-facebook" aria-hidden="true"></span></a>
 	</p>
 	
 	Feel The Bern &copy; 2015

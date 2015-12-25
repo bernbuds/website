@@ -128,11 +128,10 @@ var Home = function()
 					success: function(res) 
 					{
 						self.submitting = false;
+						submit_btn.val('Sign up now!');
 
 						if( !res.success ) 
 						{
-							submit_btn.val('Sign up now!');
-
 							grecaptcha.reset();
 							self.showError(container, res.message);
 
@@ -168,6 +167,12 @@ var Home = function()
 			self.slick.slick('slickPrev');
 		});
 
+		submit_btn.click(function(e)
+		{	
+			e.preventDefault();
+			verify_form.submit();
+		});
+
 		verify_form.validate({
 			rules: {
 				verify_email: {
@@ -197,35 +202,34 @@ var Home = function()
 				self.hideSuccess(container);
 				self.hideError(container);
 
+				var data = self.view.find(form).serializeObject();
+				data.email = $('#email').val();
+
 				self.view.find(form).ajaxSubmit({
 
 					type:"POST",
-					data: self.view.find(form).serializeObject(),
-					url: "app/controllers/BecomeABudController.php?action=verifyContact",
+					data: data,
+					url: "app/controllers/VerifyABudController.php?action=verifyContact",
 
 					success: function(res) 
 					{
 						self.submitting = false;
+						submit_btn.val('Verify');
 
 						if( !res.success ) 
 						{
-							submit_btn.val('Sign up now!');
-							self.showError(container, res.msg);
+							self.showError(container, res.message);
 							return;
 						}
 
-						submit_btn.val('Thank You!');
-						submit_btn.attr('disabled', 'disabled');
-
-						self.showSuccess(container, res.msg);
-
+						self.showSuccess(container, res.message);
 						self.slick.slick('slickNext');
 					},
 
 					error: function(res) 
 					{
 						self.submitting = false;
-						submit_btn.val('Sign up now!');
+						submit_btn.val('Verify!');
 
 						self.showError(container, 'Error reading response')
 					}
