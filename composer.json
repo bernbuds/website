@@ -1,0 +1,31 @@
+{
+    "name": "bernbuds/website",
+    "description": "Vote with a Bud",
+    "minimum-stability" :"dev",
+    "prefer-stable" : true,
+
+    "require": {
+        "twilio/sdk": "^4.9",
+        "mailgun/mailgun-php": "^1.8"
+    },
+
+    "authors": [
+        {
+            "name": "JustABud",
+            "email": "info@bernbuds.net"
+        }
+    ],
+
+    "autoload": {
+        "classmap" : [
+            "app/"
+        ],
+
+        "files" : [
+        ],
+
+        "exclude-from-classmap": [
+            "app/Config.sample.php"
+        ]
+    }
+}
