@@ -74,3 +74,5 @@ Better Text on the website?
 --------------------
 Terms of Service
 Privacy Policy
+
+Official "Forum" is here: https://github.com/bernbuds/website/issues
